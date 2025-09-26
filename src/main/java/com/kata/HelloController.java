@@ -1,4 +1,4 @@
-package com.foobarquix.kata;
+package com.kata;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @GetMapping("/hello")
     public String Hello() {
-        return "Hello Naboo";
+        return "Hello Naboo Kata!";
+    }
+
+    @GetMapping("/foobarquix")
+    public String buildString() {
+        return "foo";
     }
 }
