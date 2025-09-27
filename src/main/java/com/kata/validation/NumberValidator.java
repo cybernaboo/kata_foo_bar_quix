@@ -1,9 +1,9 @@
 package com.kata.validation;
-public class NumberValidation {
+public class NumberValidator {
     private boolean isCorrectIntValue(String inputString){
         try {
             int convertedIntValue = Integer.parseInt(inputString);
-        } catch (ClassCastException e) {
+        } catch (Exception e) {
             return false;
         }
         return true;

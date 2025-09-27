@@ -1,10 +1,11 @@
 package com.kata.service;
 
 public class NumberToStringService {
-    String Result = "";
-    String convertNumberToString(int inputNumber) {
+    String Result;
+    public String convertNumberToString(int inputNumber) {
+        Result="";
         if (inputNumber==0){
-            return "\"0\"";
+            return "0 \"0\"";
         }
         if (inputNumber % 3 == 0) {
             Result += "FOO";
@@ -19,6 +20,10 @@ public class NumberToStringService {
                 case '7' :Result+= "QUIX";break;
             }
         }
+        if (Result == ""){
+            Result=String.valueOf(inputNumber);
+        }
+        Result = String.valueOf(inputNumber)+" "+"\""+Result+"\"";
         if (Result == "") return ('"' + String.valueOf(inputNumber) + '"');
         return Result;
     }
