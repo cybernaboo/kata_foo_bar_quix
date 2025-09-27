@@ -24,7 +24,6 @@ public class NumberToStringService {
             Result=String.valueOf(inputNumber);
         }
         Result = String.valueOf(inputNumber)+" "+"\""+Result+"\"";
-        if (Result == "") return ('"' + String.valueOf(inputNumber) + '"');
         return Result;
     }
 }
