@@ -67,7 +67,7 @@ Le serveur démarrera sur le port configuré dans `src/main/resources/applicatio
 
     **Exemple d'appel :**
     ```
-    curl "http://localhost:8080/numbertostring?inputvalue=15"
+    curl "http://localhost:8081/numbertostring?inputvalue=15"
     ```
 
 ## Application Batch
