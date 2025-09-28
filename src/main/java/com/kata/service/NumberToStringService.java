@@ -1,28 +1,33 @@
 package com.kata.service;
 
 public class NumberToStringService {
-    String Result;
     public String convertNumberToString(int inputNumber) {
-        Result="";
-        if (inputNumber==0){
+        String result = "";
+        if (inputNumber == 0) {
             return "0";
         }
         if (inputNumber % 3 == 0) {
-            Result += "FOO";
+            result += "FOO";
         }
         if (inputNumber % 5 == 0) {
-            Result += "BAR";
+            result += "BAR";
         }
         for (char letter : String.valueOf(inputNumber).toCharArray()) {
-            switch(letter){
-                case '3' :Result+= "FOO";break;
-                case '5' :Result+= "BAR";break;
-                case '7' :Result+= "QUIX";break;
+            switch (letter) {
+                case '3':
+                    result += "FOO";
+                    break;
+                case '5':
+                    result += "BAR";
+                    break;
+                case '7':
+                    result += "QUIX";
+                    break;
             }
         }
-        if (Result == ""){
-            Result=String.valueOf(inputNumber);
+        if (result == "") {
+            result = String.valueOf(inputNumber);
         }
-        return Result;
+        return result;
     }
 }

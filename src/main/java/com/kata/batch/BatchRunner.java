@@ -6,9 +6,9 @@ import com.kata.validation.NumberValidator;
 import java.io.File;
 
 public class BatchRunner {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         if (args.length < 3) {
-            System.out.println("Requires two parameters : input file and output file");
+            System.out.println("Requires three parameters : input file, output file and log file");
             return;
         }
         String inputFile = args[0];
@@ -20,8 +20,8 @@ public class BatchRunner {
         FileProcessor fileProcessor = new FileProcessor(numberToStringService, numberValidator);
         try {
             fileProcessor.process(inputFile, outputFile, errorFile);
-        } catch (Exception e){
-            System.out.println("Error during file processor : "+e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error during file processor : " + e.getMessage());
         }
     }
 }

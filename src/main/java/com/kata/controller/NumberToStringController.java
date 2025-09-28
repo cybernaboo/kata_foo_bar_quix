@@ -1,4 +1,4 @@
-package com.kata;
+package com.kata.controller;
 
 import com.kata.service.NumberToStringService;
 import com.kata.validation.NumberValidator;
@@ -13,10 +13,10 @@ public class NumberToStringController {
         NumberToStringService numberToStringService = new NumberToStringService();
         NumberValidator numberValidator = new NumberValidator();
         String result = "";
-        if (numberValidator.isCorrectNumberValue(inputString)){
+        if (numberValidator.isCorrectNumberValue(inputString)) {
             result = numberToStringService.convertNumberToString(Integer.parseInt(inputString));
             return result;
-        }else{
+        } else {
             return inputString;
         }
     }

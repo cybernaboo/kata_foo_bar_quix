@@ -25,12 +25,15 @@ public class FileProcessor {
         try {
             linesOfInputFile = Files.readAllLines(Paths.get(inputFile));
             List<String> results = linesOfInputFile.stream().filter(numberValidator::isCorrectNumberValue)
-                    .map(fileLineValue -> fileLineValue + " \"" + numberToStringService.convertNumberToString(Integer.parseInt(fileLineValue)) + "\"").collect(Collectors.toList());
-            List<String> errResults = linesOfInputFile.stream().filter(Predicate.not(numberValidator::isCorrectNumberValue)).collect(Collectors.toList());
+                    .map(fileLineValue -> fileLineValue + " \""
+                            + numberToStringService.convertNumberToString(Integer.parseInt(fileLineValue)) + "\"")
+                    .collect(Collectors.toList());
+            List<String> errResults = linesOfInputFile.stream()
+                    .filter(Predicate.not(numberValidator::isCorrectNumberValue)).collect(Collectors.toList());
             Files.write(Paths.get(outputFile), results);
             Files.write(Paths.get(errorFile), errResults);
         } catch (IOException e) {
-            System.out.printf("Error during file process : "+e.getMessage());
+            System.out.printf("Error during file processing : " + e.getMessage());
             throw new RuntimeException(e);
         }
 
