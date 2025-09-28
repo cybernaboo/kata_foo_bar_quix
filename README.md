@@ -35,7 +35,7 @@ Pour démarrer le serveur web, exécutez la commande suivante. Le script corresp
 ./mvnw spring-boot:run
 ```
 
-Le serveur démarrera sur le port configuré dans `src/main/resources/application.properties` (par défaut 8080).
+Le serveur démarrera sur le port configuré dans `src/main/resources/application.properties` (actuellement 8081).
 
 ### Point de Terminaison (Endpoint)
 
