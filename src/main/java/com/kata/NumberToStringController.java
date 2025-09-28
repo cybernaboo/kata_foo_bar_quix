@@ -8,11 +8,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class NumberToStringController {
-    @GetMapping("/hello")
-    public String Hello() {
-        return "Hello Naboo Kata!";
-    }
-
     @GetMapping("/numbertostring")
     public String buildString(@RequestParam("inputvalue") String inputString) {
         NumberToStringService numberToStringService = new NumberToStringService();
