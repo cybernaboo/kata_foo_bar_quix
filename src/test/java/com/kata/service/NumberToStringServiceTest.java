@@ -7,7 +7,7 @@ public class NumberToStringServiceTest {
     @Test
     void should_return_0_for_input_0(){
         int inputValue = 0;
-        String expectedValue = "\"0\"";
+        String expectedValue = "0";
         String outputValue  = numberToStringService.convertNumberToString(inputValue);
         assertEquals(expectedValue, outputValue);
     }
@@ -21,7 +21,7 @@ public class NumberToStringServiceTest {
     @Test
     void should_return_1_for_input_1(){
         int inputValue = 1;
-        String expectedValue = "\"1\"";
+        String expectedValue = "1";
         String outputValue  = numberToStringService.convertNumberToString(inputValue);
         assertEquals(expectedValue, outputValue);
     }

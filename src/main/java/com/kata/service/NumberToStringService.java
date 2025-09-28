@@ -5,7 +5,7 @@ public class NumberToStringService {
     public String convertNumberToString(int inputNumber) {
         Result="";
         if (inputNumber==0){
-            return "0 \"0\"";
+            return "0";
         }
         if (inputNumber % 3 == 0) {
             Result += "FOO";
@@ -23,7 +23,6 @@ public class NumberToStringService {
         if (Result == ""){
             Result=String.valueOf(inputNumber);
         }
-        Result = String.valueOf(inputNumber)+" "+"\""+Result+"\"";
         return Result;
     }
 }

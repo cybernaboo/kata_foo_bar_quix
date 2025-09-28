@@ -1,1 +1,1 @@
-mvn exec:java -Dexec.args="inputfile.txt outputfile.txt errorfile.txt"
+mvn compile exec:java -Dexec.args="inputfile.txt outputfile.txt errorfile.txt"

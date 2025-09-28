@@ -22,7 +22,7 @@ public class NumberToStringController {
             result = numberToStringService.convertNumberToString(Integer.parseInt(inputString));
             return result;
         }else{
-            return "\""+inputString+"\"";
+            return inputString;
         }
     }
 }

@@ -1,1 +1,1 @@
-./mvnw.cmd exec:java "-Dexec.args=inputfile.txt outputfile.txt errorfile.txt"
+./mvnw.cmd compile exec:java "-Dexec.args=inputfile.txt outputfile.txt errorfile.txt"
